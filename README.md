@@ -1,2 +1,2 @@
 # dotfiles
-These are my dotfiles for various customisations in Vim, ZSH, etc...
+These are my dotfiles for various customisations in Vim, ZSH, etc.
