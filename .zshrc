@@ -1,4 +1,16 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+echo -e "\033]6;1;bg;red;brightness;40\a"
+echo -e "\033]6;1;bg;green;brightness;44\a"
+echo -e "\033]6;1;bg;blue;brightness;52\a"
+
+# Custom git function
+function gitlit(){
+    read -r -p 'Commit message: ' desc
+    git add .
+    git add -u
+    git commit -m "$desc"
+    git push origin master
+}
 #
 # Executes commands at the start of an interactive session.
 #
@@ -17,7 +29,7 @@ fi
 # - Powerlevel9k theme configuration
 # - - Prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time battery)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time battery)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 
