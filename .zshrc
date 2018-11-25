@@ -5,7 +5,7 @@ echo -e "\033]6;1;bg;blue;brightness;52\a"
 
 # Custom git function
 function gitlit(){
-    echo "Commit message: " -n
+    echo -n "Commit message: "
     read desc
     git add .
     git add -u
